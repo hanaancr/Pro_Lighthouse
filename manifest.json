@@ -1,0 +1,17 @@
+{
+  "name": "stations",
+  "short_name": "stations",
+  "icons": [{
+    "src": "/images/512_x_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }, {
+      "src": "images/ic_192_x_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2F3BA2"
+}
