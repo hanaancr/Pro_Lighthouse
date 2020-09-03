@@ -1,6 +1,6 @@
 {
-  "name": "stations",
-  "short_name": "stations",
+  "name": "schedules",
+  "short_name": "schedules",
   "icons": [{
     "src": "/images/512_x_512.png",
       "sizes": "512x512",

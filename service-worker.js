@@ -53,14 +53,14 @@ self.addEventListener('activate', (evt) => {
   
 // CODELAB: Remove previous cached data from disk.
 evt.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
-      }));
-    })
+  caches.keys().then((keyList) => {
+    return Promise.all(keyList.map((key) => {
+      if (key !== CACHE_NAME) {
+        console.log('[ServiceWorker] Removing old cache', key);
+        return caches.delete(key);
+      }
+    }));
+  })
 );
 
   self.clients.claim();
@@ -70,7 +70,7 @@ self.addEventListener('fetch', (evt) => {
   console.log('[ServiceWorker] Fetch', evt.request.url);
 
 // CODELAB: Add fetch event handler here.
-if (evt.request.url.includes('/stations/')) {
+if (evt.request.url.includes('/schedules/')) {
   console.log('[Service Worker] Fetch (data)', evt.request.url);
   evt.respondWith(
       caches.open(DATA_CACHE_NAME).then((cache) => {
