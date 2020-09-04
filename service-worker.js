@@ -25,14 +25,7 @@ const DATA_CACHE_NAME = 'data-cache-v1';
 const FILES_TO_CACHE = [
   '/',
   '/offline.html',
-  '/index.html',
-  '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/512_x_512.png',
-  '/images/ic_192_x_192',
-  '/images/ic_add_white_24px',
-  '/images/ic_refresh_white_24px',
-];
+ ];
 
 self.addEventListener('install', (evt) => {
   console.log('[ServiceWorker] Install');
