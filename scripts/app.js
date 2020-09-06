@@ -118,6 +118,7 @@
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState === XMLHttpRequest.DONE) {
+                window.apiLoadTime = performance.now();
                 if (request.status === 200) {
                     var response = JSON.parse(request.response);
                     var result = {};
